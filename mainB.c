@@ -1,7 +1,7 @@
 #include <xc.h>
 
 //=============================================================================
-// CONFIGURACIÓN
+// CONFIGURACIÃ“N
 //=============================================================================
 
 #pragma config FOSC = XT
@@ -46,7 +46,7 @@ void main(void){
     OPTION_REG = OPTION_REG & 0b01111111; // Pull-ups PORTB
 
     TRISB = 0xFF; // RB0 entrada INT
-    TRISC = 0x00; // Selección displays
+    TRISC = 0x00; // SelecciÃ³n displays
     TRISD = 0x00; // Segmentos
 
     PORTB = 0;
@@ -58,7 +58,7 @@ void main(void){
     char i;
 
     //=============================
-    // INTERRUPCIÓN EXTERNA
+    // INTERRUPCIÃ“N EXTERNA
     //=============================
 
     GIE = 1;       // Interrupciones globales
@@ -74,7 +74,7 @@ void main(void){
         unidades = num % 10;
 
         //=================================
-        // MULTIPLEXACIÓN
+        // MULTIPLEXACIÃ“N
         //=================================
 
         for(i = 0; i < 10; i++){
@@ -124,7 +124,7 @@ void main(void){
 }
 
 //=============================================================================
-// INTERRUPCIÓN EXTERNA RB0
+// INTERRUPCIÃ“N EXTERNA RB0
 //=============================================================================
 
 void __interrupt() ISR(void){
